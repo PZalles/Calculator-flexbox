@@ -7,18 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kalkulator</title>
     <style>
-        /* wykorzystaj body do wycentrowania kalkulatora za pomocą flexboxa */
-
-        /* nie można zmieniać struktury html */
-
-        /* kalkulator ma 60% szerokości body ale nie mniej niz 500px */
-
-        /* wyświetlacz wyniku ma 15vh wysokości */
-
-        /* przyciski mają 10vh wysokości */
-
-        /* Panel bez wyświetlacza ma mieć wysokość 70vh (czyli z wyświetlaczem 85vh)*/
-
         * {
             margin: 0;
             padding: 0;
@@ -33,10 +21,38 @@
         }
 
         .panel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             min-width: 500px;
             width: 60%;
             height: 85vh;
-            background-color: #bbb;
+            font-family: arial;
+            color: white;
+        }
+
+        .result {
+            flex-basis: 100%;
+            height: 15vh;
+            background-color: black;
+            font-size: 8vh;
+            line-height: 15vh;
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        div.result~div {
+            height: 10vh;
+            flex-basis: 30%;
+            font-size: 6vh;
+            line-height: 10vh;
+            text-align: center;
+            background-color: darkcyan;
+        }
+
+        div div:nth-last-child(1),
+        div div:nth-last-child(2) {
+            flex-basis: 45%;
         }
     </style>
 </head>
